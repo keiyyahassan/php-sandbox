@@ -1,35 +1,27 @@
 <?php
-$firstName = 'John';
-$lastName = 'Doe';
 
-$fullName = $firstName . " " . $lastName
-?>
+$number1 = 5;
+$number2 = 10;
+$number3 = '20';
+$fruit = 'apple';
+$bool1 = true;
+$bool2 = false;
+$null = null;
 
-<!DOCTYPE html>
-<html lang="en">
+// Implicit Conversion
+$result = $number1 + $number2;
+$result = $number1 + $number3;  // int (string to int)
+$result = $number3 + $number3;  // int (string to int)
+$result = $number1 . $number2;  // string (int to string)
+// $result = $fruit + $number2;  //Error
+$result = $number1 + $bool1;    // int (bool to int)
+$result = $number1 + $bool2;    // int (bool to int)
+$result = $number1 + $null;     // int (bool to int)
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Learn PHP From Scratch</title>
-</head>
+// Explicit Conversion
+$result = (string) $number1;
+$result = (int) $number3;
+$result = (bool) $number1;
 
-<body class="bg-gray-100">
-    <header class="bg-blue-500 text-white p-4">
-        <div class="container mx-auto">
-            <h1 class="text-3xl font-semibold">Learn PHP From Scratch</h1>
-        </div>
-    </header>
-    <div class="container mx-auto p-4 mt-4">
-        <div class="bg-white rounded-lg shadow-md p-6">
-            <!-- Output -->
-            <?= 'Hello, my name is ' . $fullName . '<br/>' ?>
-            <?= "Hello, my name is $fullName" . '<br/>' ?>
-            <?= 'Hello, my name is \'John\'' . '<br/>' ?>
-            <?= "Hello, my name is \"John\"" . '<br/>' ?>
-        </div>
-    </div>
-</body>
 
-</html>
+var_dump($result);
