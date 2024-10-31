@@ -1,27 +1,32 @@
 <?php
+$title = "Introduction to PHP";
+$pageTitle = "Brad's PHP Blog ";
+$author = "John Doe";
+$body = " PHP (Hypertext Preprocessor) is a widely used server-side scripting
+            language that has revolutionized web development. With its simplicity,
+            flexibility, and vast community support, PHP has become the backbone of
+            countless dynamic websites and web applications."
 
-$number1 = 5;
-$number2 = 10;
-$number3 = '20';
-$fruit = 'apple';
-$bool1 = true;
-$bool2 = false;
-$null = null;
+?>
 
-// Implicit Conversion
-$result = $number1 + $number2;
-$result = $number1 + $number3;  // int (string to int)
-$result = $number3 + $number3;  // int (string to int)
-$result = $number1 . $number2;  // string (int to string)
-// $result = $fruit + $number2;  //Error
-$result = $number1 + $bool1;    // int (bool to int)
-$result = $number1 + $bool2;    // int (bool to int)
-$result = $number1 + $null;     // int (bool to int)
+<!DOCTYPE html>
+<html lang="en">
 
-// Explicit Conversion
-$result = (string) $number1;
-$result = (int) $number3;
-$result = (bool) $number1;
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><?= $pageTitle . " | " . $title ?></title>
+</head>
 
+<body>
+    <main>
+        <h1><?= $title ?></title>
+        </h1>
+        <p>By: <?= $author ?></p>
+        <p>
+            <?= $body ?>
+        </p>
+    </main>
+</body>
 
-var_dump($result);
+</html>
