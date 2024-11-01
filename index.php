@@ -1,33 +1,40 @@
 <?php
 $output = null;
-$string = 'Hello World';
 
-// Length
-$output = strlen($string);
+// Get Year
+$output = date('Y');
 
-// Word count
-$output = str_word_count($string);
+//Get year with timestap
+$output = date('Y', 966345600);
 
-// String position
-$output = strpos($string, 'World');
+// Get timestamp from strtotime
+$output = date('Y', strtotime('1999-09-01'));
 
-// Get specific char by index
-$output = $string[4];
+// Get month
+$output = date('m');
 
-// Sub string
-$output = substr($string, 6, 5);
+// Get day
+$output = date('D');
+$output = date('l');
 
-// string replace
-$output = str_replace('World', 'Universe', $string);
+// Get month, day & year
+$output = date('Y-m-d');
+$output = date('m-d-Y');
 
-// Lower case
-$output = strtolower($string);
+//Get Hour
+$output = date('h');
 
-// Upper case
-$output = strtoupper($string);
-$output = ucwords($string); //Every first word to uppercase
+// Get min
+$output = date('i');
 
-$output = trim("  Hello World    ")
+// Get second
+$output = date('s');
+
+// Get a,/pm
+$output = date('a');
+
+// Put it all together
+$output = date('Y-m-d h:i:s a');
 
 
 ?>
@@ -50,7 +57,8 @@ $output = trim("  Hello World    ")
     </header>
     <div class="container mx-auto p-4 mt-4">
         <div class="bg-white rounded-lg shadow-md p-6 mt-6">
-            <p class="text-xl"><?= $output ?></p>
+            <!-- Output -->
+            <p class="text-xl"><?php echo $output; ?></p>
         </div>
     </div>
 </body>
