@@ -1,72 +1,37 @@
 <?php
-/*
-| Arithmetic Operators
-| Operator | Description    |
-| -------- | -------------- |
-| `+`      | Addition       |
-| `-`      | Subtraction    |
-| `*`      | Multiplication |
-| `/`      | Division       |
-| `%`      | Modulus        |
-*/
-
 $output = null;
-$num1 = 20;
-$num2 = 10;
+$string = 'Hello World';
 
-// Basic Math
-$output = "$num1 + $num2 =" . $num1 + $num2;
-$output = "$num1 - $num2 =" . $num1 - $num2;
-$output = "$num1 * $num2 =" . $num1 * $num2;
-$output = "$num1 / $num2 =" . $num1 / $num2;
-$output = "$num1 % $num2 =" . $num1 % $num2;
+// Length
+$output = strlen($string);
 
-// Assignment Operator
-$num3 = 10;
-// $num3 = $num3 + 20;
-// $num3 += 20;
-// $num3 -= 20;
-$num3 /= 2;
+// Word count
+$output = str_word_count($string);
 
-// $output = $num3;
+// String position
+$output = strpos($string, 'World');
 
-// Built-in PHP Functions
-//rand()
+// Get specific char by index
+$output = $string[4];
 
-$output = rand();
-$output = getrandmax();
-$output = rand(1, 10);
+// Sub string
+$output = substr($string, 6, 5);
 
-// round()
-$output = round(4.7);
+// string replace
+$output = str_replace('World', 'Universe', $string);
 
-// round up
-$output = ceil(4.2);
+// Lower case
+$output = strtolower($string);
 
-// round down
-$output = floor(4.2);
+// Upper case
+$output = strtoupper($string);
+$output = ucwords($string); //Every first word to uppercase
 
-// square root
-$output = sqrt(4);
-
-// pi
-$output = pi();
-
-// absolute
-$output = abs(-4.7);
-
-//max
-$output = max(1, 2, 3, 50);
-$output = max([1, 2, 35, 3,]);
-
-//min
-$output = min(1, 2, 3, 50);
-$output = min([10, 2, 35, 7,]);
-
-$output = number_format(12345678.191234, 2, '.', ',');
+$output = trim("  Hello World    ")
 
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -85,10 +50,7 @@ $output = number_format(12345678.191234, 2, '.', ',');
     </header>
     <div class="container mx-auto p-4 mt-4">
         <div class="bg-white rounded-lg shadow-md p-6 mt-6">
-            <!-- Output -->
-            <p class="text-xl">
-                <?= $output ?>
-            </p>
+            <p class="text-xl"><?= $output ?></p>
         </div>
     </div>
 </body>
